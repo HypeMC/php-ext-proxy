@@ -1,0 +1,9 @@
+// vim:ft=javascript
+
+ARG_ENABLE("proxy", "whether to enable proxy support", "no");
+
+if (PHP_PROXY != "no") {
+	EXTENSION("proxy", "proxy.c proxy_class.c proxy_object.c proxy_dispatch.c proxy_iterator.c", PHP_EXTNAME_SHARED, "/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1");
+	AC_DEFINE("HAVE_PROXY", 1, "Have proxy support");
+	PHP_INSTALL_HEADERS("ext/proxy", "php_proxy.h");
+}

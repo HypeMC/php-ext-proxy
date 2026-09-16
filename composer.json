@@ -1,0 +1,17 @@
+{
+    "name": "bizkit/proxy",
+    "description": "Engine-level proxy objects: intercept instance method calls and property operations on classes (including final ones), abstract classes and interfaces",
+    "type": "php-ext",
+    "license": "MIT",
+    "keywords": ["proxy", "mock", "interceptor", "aop", "testing"],
+    "require": {
+        "php": ">=8.4"
+    },
+    "php-ext": {
+        "extension-name": "proxy",
+        "priority": 80,
+        "support-zts": true,
+        "support-nts": true,
+        "configure-options": []
+    }
+}
